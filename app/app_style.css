@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 
 :root {
     --card-color: hsla(0, 0%, 88%);
@@ -21,12 +22,10 @@ body {
     height: 100vh;
     margin: 0;
     color: var(--fontcolor);
-  
+    font-family: 'Source Sans Pro', sans-serif, 'Times New Roman';
 }
 
 /* THEME SWITCH */
-
-
 
 .theme-switch-wrapper {
     display: flex;
@@ -61,15 +60,19 @@ body {
 
 .homework {
     background-color: var(--homework);
-    font-weight: bold;
 }
 
 h5.card-title {
-    font-size: 1.25rem;
+    font-size: 1.40rem; 
+    font-weight: bold;
+    letter-spacing: 1px;
 }
+
 .btn{
     color: var(--fontcolor);
+    letter-spacing: 1px;
 }
+
 .btn-homework {
     background-color: var(--homework);
 }
@@ -90,6 +93,7 @@ h5.card-title {
 
 .card {
     background-color: var(--card-color);
+    font-weight: 400;
 }
 
 .nav {
