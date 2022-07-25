@@ -1,7 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 
 :root {
     --card-color: hsla(0, 0%, 88%);
+
     --homework: #e68fa1;
     --math: #b08ac9;
     --deadline: #6eaaf1;
@@ -21,70 +22,57 @@ body {
     background-position: bottom;
     height: 100vh;
     margin: 0;
+
     color: var(--fontcolor);
+    font-family: 'Source Sans Pro', sans-serif, 'Times New Roman';
 }
 
 /* THEME SWITCH */
+
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 2rem;  
+    padding: 0px 10px;
 }
+
+.theme-switch-wrapper:hover{
+    color: var(--fontcolor);
+    background-color: var(--card-color);
+    transition: .3s;
+}
+
+.theme-switch-wrapper:hover, #theme-image:hover{
+  cursor: pointer;
+}
+
 .theme-switch {
     display: inline-block;
-    height: 34px;
     position: relative;
-    width: 60px;
 }
   
 .theme-switch input {
     display:none;
 }
 
-.slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-}
-  
-  .slider:before {
-    background-color: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
-  }
-  
-  input:checked + .slider {
-    background-color: #66bb6a;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-}
+
 
 .homework {
     background-color: var(--homework);
-    font-weight: bold;
 }
 
 h5.card-title {
-    font-size: 1.25rem;
+    font-size: 1.40rem; 
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn{
+    color: var(--fontcolor);
+    letter-spacing: 1px;
 }
 .btn{
     color: var(--fontcolor);
@@ -109,6 +97,7 @@ h5.card-title {
 
 .card {
     background-color: var(--card-color);
+    font-weight: 400;
 }
 
 .nav {
