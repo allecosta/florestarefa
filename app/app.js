@@ -1,5 +1,18 @@
-// const timeline_width = document.querySelectorAll()
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const themeImage = document.querySelector('#theme-image');
 
-// let TimelineContainer = document.getElementById("timeline-container").clientHeight;
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeImage.classList.remove("bi-moon-stars-fill");
+        themeImage.classList.add("bi-sun-fill");
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeImage.classList.remove("bi-sun-fill");
+        themeImage.classList.add("bi-moon-stars-fill");
+    }    
+}
 
-// TimelineContainer = timeline_width;
+toggleSwitch.addEventListener('change', switchTheme, false);
+
