@@ -3,6 +3,7 @@ body {
   background-color: #fefeff;
 }
 
+/* AZUL CÉU - 56c0ff */
 
 .layout_padding {
   padding: 75px 0;
@@ -81,12 +82,10 @@ a,
 a:hover,
 a:focus {
   text-decoration: none;
+  color: initial;
+
 }
 
-a:hover,
-a:focus {
-  color: initial;
-}
 
 .btn,
 .btn:focus {
@@ -104,7 +103,7 @@ a:focus {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(../images/hero-bg.png);
+  background: url(../images/hero-bg2.png);
   background-size: 100% 100%;
   background-position: right bottom;
   background-repeat: no-repeat;
@@ -223,7 +222,6 @@ a:focus {
   text-align: right;
 }
 
-
 /* investimento section */
 .why_section {
   text-align: right;
@@ -244,7 +242,7 @@ a:focus {
 
 .client_section h5 {
   font-size: 24px;
-  color: #fdd31d;
+  color: #56c0ff ;
 }
 
 .client_section .row {
@@ -265,7 +263,7 @@ a:focus {
   width: 100px;
   height: 30px;
   border-radius: 20px;
-  background-color: #fdd31d;
+  background-color: #56c0ff;
 }
 
 .client_img-box::before {
@@ -330,7 +328,7 @@ a:focus {
 }
 
 .client_section .carousel-indicators li.active {
-  background-color: #fdd31d;
+  background-color: #56c0ff;
 }
 
 
