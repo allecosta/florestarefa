@@ -1,9 +1,3 @@
-// const timeline_width = document.querySelectorAll()
-
-// let TimelineContainer = document.getElementById("timeline-container").clientHeight;
-
-// TimelineContainer = timeline_width;
-
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const themeImage = document.querySelector('#theme-image');
 
@@ -21,3 +15,4 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
