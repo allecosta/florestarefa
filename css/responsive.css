@@ -2,7 +2,6 @@
 
 @media (max-width: 992px) {
 
-
     .hero-container {
         flex-direction: column;
     }
@@ -24,9 +23,7 @@
         color: #fff;
     }
 
-
 }
-
 
 @media (max-width: 768px) {
 
@@ -50,18 +47,26 @@
         padding: 20px 25px;
         text-align: center;
     }
-/* 
-    .common_style > .admission_section {
-        background-color: aquamarine;
-        display: flex;
-        flex-direction: column;
-    }
-     */
+
     .common_style img {
         width: 100%;
         margin: 20px auto;
     }
-
+    .cards {
+        flex-direction: column;
+    }
+    .cards:nth-child(even) {
+        flex-direction: column;
+      }
+      .cards-text {
+        text-align: center;
+      }
+      .cards-text h3 {
+        margin: 30px 0;
+      }
+      .cards-img {
+        margin-top: 40px;
+      }
 }
 
 @media (max-width: 576px) {
@@ -141,8 +146,6 @@
         width: auto;
     }
 }
-
-
 
 @media (max-width: 480px) {}
 
