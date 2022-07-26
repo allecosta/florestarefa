@@ -6,6 +6,9 @@
     --math: #b08ac9;
     --deadline: #6eaaf1;
     --fontcolor: black;
+    --lvl: #f77779;
+    --age: #ee976b;
+    --exp: #65c0bd;
 }
 
 [data-theme="dark"] {
@@ -14,6 +17,10 @@
     --math: #6d597a;
     --deadline: #355070;
     --fontcolor: white;
+    --lvl: #f94144;
+    --age: #f9844a;
+    --exp: #4d908e;
+
 }
 
 body {
@@ -59,10 +66,45 @@ body {
 }
 
 
-
 .homework {
     background-color: var(--homework);
 }
+
+/* Information Card */
+#information-card-image img{
+    width: 130px;
+    border-radius: 10px;
+}
+
+h5.information-name{
+    margin-top: 5px;
+    font-size: 1.40rem; 
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#information .btn{
+    color: var(--fontcolor);
+    letter-spacing: 1px;
+    display: inline;
+    margin-top: 10px;
+}
+
+.btn-lvl{
+    background-color: var(--lvl);
+}
+.btn-age{
+    background-color: var(--age);
+}
+.btn-exp {
+    background-color: var(--exp);
+}
+
+.progress{ 
+    width: 50%;
+}
+
+/* Task Cards */
 
 h5.card-title {
     font-size: 1.40rem;
