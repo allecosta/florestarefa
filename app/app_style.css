@@ -2,7 +2,6 @@
 
 :root {
     --card-color: hsla(0, 0%, 88%);
-
     --homework: #e68fa1;
     --math: #b08ac9;
     --deadline: #6eaaf1;
@@ -35,27 +34,28 @@ body {
     position: absolute;
     top: 0;
     right: 30px;
-    font-size: 2rem;  
+    font-size: 2rem;
     padding: 0px 10px;
 }
 
-.theme-switch-wrapper:hover{
+.theme-switch-wrapper:hover {
     color: var(--fontcolor);
     background-color: var(--card-color);
     transition: .3s;
 }
 
-.theme-switch-wrapper:hover, #theme-image:hover{
-  cursor: pointer;
+.theme-switch-wrapper:hover,
+#theme-image:hover {
+    cursor: pointer;
 }
 
 .theme-switch {
     display: inline-block;
     position: relative;
 }
-  
+
 .theme-switch input {
-    display:none;
+    display: none;
 }
 
 
@@ -65,18 +65,20 @@ body {
 }
 
 h5.card-title {
-    font-size: 1.40rem; 
+    font-size: 1.40rem;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.btn{
+.btn {
     color: var(--fontcolor);
     letter-spacing: 1px;
 }
-.btn{
+
+.btn {
     color: var(--fontcolor);
 }
+
 .btn-homework {
     background-color: var(--homework);
 }
@@ -106,4 +108,9 @@ h5.card-title {
 
 .card.rounded {
     border-radius: .5rem !important;
+}
+
+select,
+option {
+    color: black;
 }
