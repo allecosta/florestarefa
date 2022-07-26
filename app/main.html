@@ -22,7 +22,7 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
+<body id="background">
     <header>
         <h1>Our Über-cool StartSe App</h1>
     </header>
@@ -109,8 +109,10 @@
                             font-weight-bold">Experience: <span id="exp">0</span>/100</button>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            
+                            <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0"  aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
+                          
                     </div>
                 </div>
             </div>
@@ -136,6 +138,8 @@
                         content.Some quick example text to build on the card title and make up the
                         bulk of the card's content.Some quick example text to build on the card
                         title and make up the bulk of the card's content.</p>
+
+                        
                     </div>
 
                     <div class="col-sm-1 timeline-container justify-self-center">
@@ -146,11 +150,78 @@
             </div>
             </div>
 
+            <div class="card container-fluid rounded">
+                <div class="card-body row">
 
 
+                    <div class='col'>
+                        <h5 class="card-title display-5">Exercício de Matemática</h5>
+                        <div class="mt-1">
+                            <button type="button" class="btn btn-homework btn-sm
+                            font-weight-bold">Homework</button>
+                            <button type="button" class="btn btn-subj-math btn-sm
+                            font-weight-bold">Math</button>
+                            <button type="button" class="btn btn-sm btn-deadline
+                            font-weight-bold">01/09/2022</button>
+                        </div>
+
+                        <div class="row tasks">
+                            <div class="col-md-6">
+                              <p><span>Atividades sobre formas planas</span> Blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
+                            </div>
+                            <div class="col-md-2">
+                              <label>2014-01-29</label>
+                            </div>
+                            
+                            <div class="col-md-2">
+                              <input name="done" class="done" type="checkbox" value="10">
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class="col-sm-1 timeline-container justify-self-center">
+                </div>
 
             </div>
+        </div>
+
+        <div class="card container-fluid rounded">
+            <div class="card-body row">
+
+
+                <div class='col'>
+                    <h5 class="card-title display-5">Teste de Português</h5>
+                    <div class="mt-1">
+                        <button type="button" class="btn btn-homework btn-sm
+                        font-weight-bold">Homework</button>
+                        <button type="button" class="btn btn-subj-math btn-sm
+                        font-weight-bold">Portuguese</button>
+                        <button type="button" class="btn btn-sm btn-deadline
+                        font-weight-bold">01/09/2022</button>
+                    </div>
+
+                    <div class="row tasks">
+                        <div class="col-md-6">
+                          <p><span>Atividades sobre pronomes</span> Blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
+                        </div>
+                        <div class="col-md-2">
+                          <label>2014-01-29</label>
+                        </div>
+                        
+                        <div class="col-md-2">
+                          <input name="done" class="done" type="checkbox" value="30">
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-1 timeline-container justify-self-center">
             </div>
+
+        </div>
+    </div>
+
+
+
         </section>
 
     </main>
