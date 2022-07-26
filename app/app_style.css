@@ -23,9 +23,12 @@
 
 }
 
+
 body {
     background-image: url(./media/3.png);
     background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     margin: 0;
 
@@ -101,7 +104,11 @@ h5.information-name{
 }
 
 .progress{ 
-    width: 50%;
+    width: 100%;
+}
+
+#myBar {
+    width: 0%;
 }
 
 /* Task Cards */
