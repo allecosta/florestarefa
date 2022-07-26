@@ -27,6 +27,7 @@ body {
     background-position: bottom;
     height: 100vh;
     margin: 0;
+
     color: var(--fontcolor);
     font-family: 'Source Sans Pro', sans-serif, 'Times New Roman';
 }
@@ -61,7 +62,6 @@ body {
 .theme-switch input {
     display:none;
 }
-
 
 
 .homework {
