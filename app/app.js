@@ -1,82 +1,32 @@
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-);
-const themeImage = document.querySelector("#theme-image");
+import { start_up_app } from "./js/subjectcreator.js";
+import { darkmode } from "./js/darkmode.js";
+import { progressbar } from "./js/progressbar.js";
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    themeImage.classList.remove("bi-moon-stars-fill");
-    themeImage.classList.add("bi-sun-fill");
-    document.getElementById('background').style.backgroundImage = "url(./media/7.png)";
+start_up_app();
+darkmode();
+progressbar();
 
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    themeImage.classList.remove("bi-sun-fill");
-    themeImage.classList.add("bi-moon-stars-fill");
-    document.getElementById('background').style.backgroundImage = "url(./media/3.png)";
-  }
+// class HomeworkCard { constructor(subject, deadline, content) { this.id = id; this.type =
+//   "Homework"; this.subject = subject; this.deadline = deadline; this.content = content; } }
+
+// class AttendanceCard { constructor(date, attendance) { this.id = id; this.type = "Attendance";
+//   this.date = date; this.attendance = attendance; } }
+
+// class TestCard { constructor(subject, date, content) { this.id = id; this.type = "Test";
+//   this.subject = subject; this.date = date; this.content = content; } }
+
+// oi = new TestCard("123", "Math", "01/09/2011", "Music");
+
+// window.localStorage.setItem("oi", JSON.stringify(oi));
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+
+  const formJSON = Object.fromEntries(data.entries());
+  console.log("");
 }
 
-toggleSwitch.addEventListener("change", switchTheme, false);
-
-
-//PROGRESS BAR
-
-
-$('input').on('click', function() {
-  var emptyValue = 0;
-  $('input:checked').each(function() {
-      emptyValue += parseInt($(this).val());
-  });
-  $('.progress-bar').css('width', emptyValue + '%').attr('aria-valuenow', emptyValue);
-});
-
-
-
-class HomeworkCard {
-  constructor(subject, deadline, content) {
-    this.id = id;
-    this.type = "Homework";
-    this.subject = subject;
-    this.deadline = deadline;
-    this.content = content;
-  }
-}
-
-class AttendanceCard {
-  constructor(date, attendance) {
-    this.id = id;
-    this.type = "Attendance";
-    this.date = date;
-    this.attendance = attendance;
-  }
-}
-
-class TestCard {
-  constructor(subject, date, content) {
-    $this.id = id;
-    this.type = "Test";
-    this.subject = subject;
-    this.date = date;
-    this.content = content;
-  }
-}
-
-SubjectListSelector = document.getElementById("SubjectList");
-SubjectList = Array("a", "b", "c", "d");
-
-SubjectListBuilder(SubjectList);
-
-function SubjectListBuilder(SubjectList) {
-  for (subject of SubjectList) {
-    console.log(subject);
-    SubjectListSelector.innerHTML =
-      SubjectListSelector.innerHTML +
-      `<option value="${subject}">${subject}</option>`;
-  }
-}
-
-oi = new TestCard("123", "Math", "01/09/2011", "Music");
-
-window.localStorage.setItem("oi", JSON.stringify(oi));
+const form = document.querySelector(".contact-form");
+form.addEventListener("submit", handleFormSubmit);
