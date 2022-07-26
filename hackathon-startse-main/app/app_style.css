@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+    --card-color: hsla(0, 0%, 88%);
+
+    --homework: #e68fa1;
+    --math: #b08ac9;
+    --deadline: #6eaaf1;
+    --fontcolor: black;
+}
+
+[data-theme="dark"] {
+    --card-color: #37393b;
+    --homework: #b56576;
+    --math: #6d597a;
+    --deadline: #355070;
+    --fontcolor: white;
+
+}
+
+body {
+    background-image: url(./media/3.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+
+    color: var(--fontcolor);
+    font-family: 'Source Sans Pro', sans-serif, 'Times New Roman';
+}
+
+/* THEME SWITCH */
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 2rem;  
+    padding: 0px 10px;
+}
+
+.theme-switch-wrapper:hover{
+    color: var(--fontcolor);
+    background-color: var(--card-color);
+    transition: .3s;
+}
+
+.theme-switch-wrapper:hover, #theme-image:hover{
+  cursor: pointer;
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+}
+  
+.theme-switch input {
+    display:none;
+}
+
+
+
+.homework {
+    background-color: var(--homework);
+}
+
+h5.card-title {
+    font-size: 1.40rem; 
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn{
+    color: var(--fontcolor);
+    letter-spacing: 1px;
+}
+
+.btn-homework {
+    background-color: var(--homework);
+}
+
+.btn-subj-math {
+    background-color: var(--math);
+}
+
+.btn-deadline {
+    background-color: var(--deadline);
+}
+
+.timeline-container {
+    background-color: black;
+    width: 60px;
+    height: inherit;
+}
+
+.card {
+    background-color: var(--card-color);
+    font-weight: 400;
+}
+
+.nav {
+    z-index: 1;
+}
+
+.card.rounded {
+    border-radius: .5rem !important;
+}
+
+.form-wrapper {
+    margin: 0;
+}
