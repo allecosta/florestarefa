@@ -2,7 +2,6 @@
 
 @media (max-width: 992px) {
 
-
     .hero-container {
         flex-direction: column;
     }
@@ -23,13 +22,26 @@
     .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
         color: #fff;
     }
-
-
+    .informations {
+        padding: 0 20px;
+    }
+    .cards, .cards:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+    }
+      .cards-text {
+        text-align: center;
+      }
+      .cards-text h3 {
+        margin: 30px 0;
+      }
+      .cards-img img{
+        width: 400px;
+        margin-top: 40px;
+      }
 }
 
-
 @media (max-width: 768px) {
-
 
     .hero_detail-box {
         text-align: center;
@@ -56,7 +68,30 @@
         width: 100%;
         margin: 20px auto;
     }
-
+    .informations {
+        width: 100%;
+        margin: 0;
+    }
+    .cards .cards-text {
+        width: 80%;
+        margin: 0 10px;
+      }
+      .cards {
+        margin-top: 10px;
+      }
+      .cards .cards-img img {
+        width: 90%;
+      }
+      .client_section h5 {
+        font-size: 20px;
+        color: #56c0ff ;
+        margin-top: 15px;
+      }
+      .scrollTop {
+        bottom: 5px;
+        right: 5px;
+        padding: 5px 10px;
+      }
 }
 
 @media (max-width: 576px) {
@@ -71,7 +106,7 @@
         width: 75px;
         height: 20px;
         border-radius: 20px;
-        background-color: #fdd31d;
+        background-color: #56c0ff;
     }
 
     .client_img-box::before {
@@ -136,8 +171,6 @@
         width: auto;
     }
 }
-
-
 
 @media (max-width: 480px) {}
 
