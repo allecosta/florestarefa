@@ -1,0 +1,17 @@
+{
+  "count": 11,
+  "results": [
+    { "name": "Matemática", "id": 1 },
+    { "name": "Português", "id": 2 },
+    { "name": "Geografia", "id": 3 },
+    { "name": "História", "id": 4 },
+    { "name": "Física", "id": 5 },
+    { "name": "Química", "id": 5 },
+    { "name": "Artes", "id": 6 },
+    { "name": "Filosofia", "id": 7 },
+    { "name": "Sociologia", "id": 8 },
+    { "name": "Introdução à Programação", "id": 9 },
+    { "name": "Inglês", "id": 10 },
+    { "name": "Espanhol", "id": 11 }
+  ]
+}
