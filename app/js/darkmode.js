@@ -11,12 +11,24 @@ function darkmode() {
       themeImage.classList.add("bi-sun-fill");
       document.getElementById("background").style.backgroundImage =
         "url(./media/7.png)";
+      document
+        .getElementById("main_nav")
+        .classList.remove("navbar-light", "bg-light");
+      document
+        .getElementById("main_nav")
+        .classList.add("navbar-dark", "bg-dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
       themeImage.classList.remove("bi-sun-fill");
       themeImage.classList.add("bi-moon-stars-fill");
       document.getElementById("background").style.backgroundImage =
         "url(./media/3.png)";
+      document
+        .getElementById("main_nav")
+        .classList.remove("navbar-dark", "bg-dark");
+      document
+        .getElementById("main_nav")
+        .classList.add("navbar-light", "bg-light");
     }
   }
 
