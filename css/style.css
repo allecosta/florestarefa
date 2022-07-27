@@ -185,6 +185,7 @@ a:focus {
   display: flex;
   padding-top: 90px;
   padding-bottom: 325px;
+  animation: opacity-animation 1.5s ease-in-out;
 }
 
 .hero_detail-box {
@@ -473,8 +474,11 @@ a:focus {
   display: inline-block;
   width: 30px;
   margin-top: 10px;
-  margin-left: 10px;
   color: #6bd1bd
+}
+
+.icons a:nth-last-child(1){
+  margin-left: 10px;
 }
 
 .scrollTop {
@@ -486,4 +490,14 @@ a:focus {
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
+}
+
+/* ANIMATIONS CARDS */
+@keyframes opacity-animation {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
