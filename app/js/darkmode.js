@@ -9,6 +9,7 @@ function darkmode() {
       document.documentElement.setAttribute("data-theme", "dark");
       themeImage.classList.remove("bi-moon-stars-fill");
       themeImage.classList.add("bi-sun-fill");
+      $("body").css("transition", "2s ease");
       document.getElementById("background").style.backgroundImage =
         "url(./media/7.png)";
       document
