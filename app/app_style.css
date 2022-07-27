@@ -73,9 +73,7 @@ body {
 }
 
 
-.homework {
-    background-color: var(--homework);
-}
+
 
 /* Information Card */
 
@@ -154,7 +152,7 @@ h5.card-title {
 }
 
 .btn-exp{
-    background-color: var( --taskexp);
+    background-color: var(--taskexp);
 }
 
 .btn-deadline {
@@ -168,13 +166,18 @@ h5.card-title {
     height: inherit;
 }
 
+.row .tasks p{
+    animation: description-reveal .7s ease; 
+} 
+
 .hide p{
-    display:none;
+    display: none;
 }
 
 .card {
     background-color: var(--card-color);
     font-weight: 400; 
+    overflow:hidden;
 }
 
 .list-icon {
@@ -183,7 +186,7 @@ h5.card-title {
     height: 20px;
     transition-duration: 0.3s;
     color: var(--fontcolor);
-}
+} 
 
 .rotate{
     transform: rotate(90deg);
@@ -191,16 +194,17 @@ h5.card-title {
 }
 
 .card .task-checkbox{
-    position:absolute;
+    position: absolute;
     right: 0px;
-    top:-0;
-    text-align: right; 
+    top: 0; 
+    text-align: right;
 }
 
 .card .task-checkbox .done{
     height: 30px;
-    width: 30px;
+    width: 30px; 
 }
+
 
 .row{
     flex-wrap: nowrap !important;
@@ -229,3 +233,22 @@ select,
 option {
     color: black;
 }
+
+
+/* Keyframes */
+
+@keyframes description-reveal {
+    0%{
+        margin-bottom: -100px; 
+        opacity: 0;
+    }
+
+    30%{
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100; 
+    }
+}  
