@@ -1,3 +1,4 @@
+
 const toggleSwitch = document.querySelector(
   '.theme-switch input[type="checkbox"]'
 );
@@ -19,6 +20,9 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener("change", switchTheme, false);
+
+
+
 
 
 //PROGRESS BAR
@@ -80,3 +84,12 @@ function SubjectListBuilder(SubjectList) {
 oi = new TestCard("123", "Math", "01/09/2011", "Music");
 
 window.localStorage.setItem("oi", JSON.stringify(oi));
+
+
+/*Show Card Text*/
+function showText (n) {
+  const listheader= document.getElementsByClassName("list-header");
+  const listIcon= document.getElementsByClassName("list-icon")
+  listIcon[n].classList.toggle("rotate");
+  listheader[n].classList.toggle("hide");
+}

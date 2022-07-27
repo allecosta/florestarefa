@@ -1,0 +1,27 @@
+@media (max-width: 530px) {
+    .card {
+        margin-top:10px;
+    }
+
+    h5.card-title {
+        width: 87%;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .card .task-checkbox .done{
+        height: 25px;
+        width: 25px;   
+    }
+    .mt-1 .btn{
+        font-size: .9rem;
+    }
+
+    .col-md-6{
+        max-width: 95% !important;
+        font-size: 1rem;
+        letter-spacing: .2px;   
+    }
+}
+
