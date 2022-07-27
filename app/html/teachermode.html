@@ -22,53 +22,50 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
+<body id="background">
     <header>
         <h1>Our Über-cool StartSe App</h1>
     </header>
 
 
-    <nav class="theme-switch-wrapper ">
-        <label class="theme-switch" for="checkbox">
+    <nav id="main_nav" class="navbar fixed-bottom navbar-light bg-light fa-lg row">
+        <label class="theme-switch col-1" for="checkbox">
             <input type="checkbox" id="checkbox" />
             <div id="theme-image" class="bi bi-moon-stars-fill"></div>
         </label>
-    </nav>
+        <button type="button" class="btn flex-column col-1" data-toggle="collapse"
+        href="#information-card" aria-pressed="false" autocomplete="off">
+            <div><i class="bi bi-person fa-lg"></i></div>Perfil
+        </button>
 
-
-
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-        <button id='dark_mode' type="button" class="btn btn-dark"><i class="bi
-        bi-moon-stars-fill"></i>Night</button>
-        <button type="button" class="btn flex-column font-weight-bold" data-toggle="modal"
-        data-target="#ActivityModal">
-            <div><i class="bi bi-plus-circle fa-lg"></i></div>Insert Activity
+        <button type="button col-1" class="btn flex-column font-weight-bold">
+            <div><i class="bi bi-plus-circle fa-lg"></i></div>Teacher Mode
         </button>
     </nav>
 
     <main>
 
-        <div id="AddActivity">
-            <form>
-                <div class="form-group">
-                    <label for="ActivityType">Activity Type</label>
-                    <select id='ActivityType' class="form-control">
-                        <option value="Homework">Homework</option>
-                        <option value="Attendance">Attendance</option>
-                        <option value="Test">Test</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="SubjectList">Lista de Matérias</label>
-                    <select id='SubjectList' class="form-control">
-                    </select>
-                </div>
+        <div>
+            <form id="AddActivity">
 
-                <div class="form-group">
-                    <label for="ActivityContent">Conteúdo</label>
-                    <textarea class="form-control" id="ActivityContent" rows="6"></textarea>
-                    </select>
-                </div>
+                <label for="ActivityType">Activity Type</label>
+                <select id='ActivityType' class="form-control" name="ActivityType">
+                    <option value="Homework">Homework</option>
+                    <option value="Attendance">Attendance</option>
+                    <option value="Test">Test</option>
+                </select>
+
+
+                <label for="SubjectList">Lista de Matérias</label>
+                <select id='SubjectList' class="form-control" name="SubjectList">
+                </select>
+
+
+
+                <label for="ActivityContent">Conteúdo</label>
+                <textarea class="form-control" id="ActivityContent" name="ActivityContent"
+                rows="6"></textarea>
+                </select>
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
