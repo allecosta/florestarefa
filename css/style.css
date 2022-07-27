@@ -273,6 +273,16 @@ a:focus {
   color: #56c0ff ;
 }
 
+/* ANIMATIONS CARDS */
+@keyframes opacity-animation {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .client_section .row {
   align-items: center;
   padding: 75px 0;
@@ -434,6 +444,7 @@ a:focus {
   text-align: center;
 }
 
+/* Cards section */
 .informations {
   display: flex;
   flex-direction: column;
@@ -450,6 +461,12 @@ a:focus {
   align-items: center;
   justify-content: center;
   margin-top: 80px;
+  opacity: .7;
+  transition: .5s;
+}
+.cards:hover {
+  opacity: 1;
+  transition: .5s;
 }
 .cards .cards-text {
   margin: 0 30px;
@@ -492,12 +509,3 @@ a:focus {
   cursor: pointer;
 }
 
-/* ANIMATIONS CARDS */
-@keyframes opacity-animation {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
