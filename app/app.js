@@ -2,16 +2,19 @@ import { start_up_app } from "./js/subjectcreator.js";
 import { darkmode } from "./js/darkmode.js";
 import { progressbar } from "./js/progressbar.js";
 import { SaveActivity } from "./js/cardcreator.js";
+import { LoadCards } from "./js/cardloader.js";
 
 start_up_app();
 darkmode();
 progressbar();
 SaveActivity();
+LoadCards();
 
-// class HomeworkCard { constructor(id, subject, deadline, content, xp, attendance) { this.id = id;
-//   // contador automatico this.type = "Homework"; //varchar this.subject = subject; //varchar like
-//     type this.deadline = deadline; //date this.content = content; //varchar this.xp = xp;
-//     //number this.attendance = this.attendance; //boolean } }
+$(document).ready(function () {
+  $("#AddActivitybtn").click(function () {
+    $("#AddActivityContainer").toggle();
+  });
+});
 
 // oi = new TestCard("123", "Math", "01/09/2011", "Music");
 
