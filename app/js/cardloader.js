@@ -26,7 +26,8 @@ function LoadCards() {
               <p class="card-text mt-3 text-justify">${CardObject.content}</p>
           </div>
 
-          <div class="col-sm-1 timeline-container justify-self-center">
+          <div class="col-1 task-checkbox justify-self-center">
+          <input name="done" class="done" type="checkbox" value="10">
           </div>
 
       </div>
