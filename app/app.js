@@ -1,95 +1,28 @@
+import { start_up_app } from "./js/subjectcreator.js";
+import { darkmode } from "./js/darkmode.js";
+import { progressbar } from "./js/progressbar.js";
+import { SaveActivity } from "./js/cardcreator.js";
+import { LoadCards } from "./js/cardloader.js";
 
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-);
-const themeImage = document.querySelector("#theme-image");
+start_up_app();
+darkmode();
+progressbar();
+SaveActivity();
+LoadCards();
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    themeImage.classList.remove("bi-moon-stars-fill");
-    themeImage.classList.add("bi-sun-fill");
-    document.getElementById('background').style.backgroundImage = "url(./media/7.png)";
-
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    themeImage.classList.remove("bi-sun-fill");
-    themeImage.classList.add("bi-moon-stars-fill");
-    document.getElementById('background').style.backgroundImage = "url(./media/3.png)";
-  }
-}
-
-toggleSwitch.addEventListener("change", switchTheme, false);
-
-
-
-
-
-//PROGRESS BAR
-
-
-$('input').on('click', function() {
-  var emptyValue = 0;
-  $('input:checked').each(function() {
-      emptyValue += parseInt($(this).val());
+$(document).ready(function () {
+  $("#AddActivitybtn").click(function () {
+    $("#AddActivityContainer").toggle();
   });
-  $('.progress-bar').css('width', emptyValue + '%').attr('aria-valuenow', emptyValue);
 });
 
+// oi = new TestCard("123", "Math", "01/09/2011", "Music");
 
+// window.localStorage.setItem("oi", JSON.stringify(oi));
 
-class HomeworkCard {
-  constructor(subject, deadline, content) {
-    this.id = id;
-    this.type = "Homework";
-    this.subject = subject;
-    this.deadline = deadline;
-    this.content = content;
-  }
-}
+// function handleFormSubmit(event) { event.preventDefault();
 
-class AttendanceCard {
-  constructor(date, attendance) {
-    this.id = id;
-    this.type = "Attendance";
-    this.date = date;
-    this.attendance = attendance;
-  }
-}
+//   const data = new FormData(event.target);
 
-class TestCard {
-  constructor(subject, date, content) {
-    $this.id = id;
-    this.type = "Test";
-    this.subject = subject;
-    this.date = date;
-    this.content = content;
-  }
-}
-
-SubjectListSelector = document.getElementById("SubjectList");
-SubjectList = Array("a", "b", "c", "d");
-
-SubjectListBuilder(SubjectList);
-
-function SubjectListBuilder(SubjectList) {
-  for (subject of SubjectList) {
-    console.log(subject);
-    SubjectListSelector.innerHTML =
-      SubjectListSelector.innerHTML +
-      `<option value="${subject}">${subject}</option>`;
-  }
-}
-
-oi = new TestCard("123", "Math", "01/09/2011", "Music");
-
-window.localStorage.setItem("oi", JSON.stringify(oi));
-
-
-/*Show Card Text*/
-function showText (n) {
-  const listheader= document.getElementsByClassName("list-header");
-  const listIcon= document.getElementsByClassName("list-icon")
-  listIcon[n].classList.toggle("rotate");
-  listheader[n].classList.toggle("hide");
-}
+//   const formJSON = Object.fromEntries(data.entries()); console.log("");
+// }

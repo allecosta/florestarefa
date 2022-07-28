@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css" />
+
+    <!-- font Awesome Stylesheet -->
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../css/teachermode.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body id="body-teacher">
+    <header>
+        <h1>Our Über-cool StartSe App</h1>
+    </header>
+
+
+    <nav id="main_nav" class="navbar fixed-bottom navbar-light bg-light fa-lg row">
+        <label class="theme-switch col-1 btn" for="checkbox" name="Dark">
+            <input type="checkbox" id="checkbox" />
+            <div id="theme-image" class="bi bi-moon-stars-fill"></div>
+        </label>
+        <button type="button" class="btn flex-column col-1" data-toggle="collapse"
+        href="#information-card" aria-pressed="false" autocomplete="off">
+            <div><i class="bi bi-person-fill fa-lg"></i></div>Perfil
+        </button>
+
+        <button id="AddActivitybtn" type="button" class="btn flex-column font-weight-bold
+        text-center" data-toggle="collapse" aria-pressed="false" autocomplete="off"
+        href="#AddActivityContainer">
+            <div><i class="bi bi-plus-circle fa-lg"></i></div>
+            <div>Nova<br>Atividade</div>
+        </button>
+
+        <a href="../main.html" class="btn flex-column font-weight-bold text-center" role="button">
+            <div><i class="bi bi-person-workspace fa-lg"></i></div>
+            <div>Modo <br> Estudante</div>
+        </a>
+        </button>
+    </nav>
+
+    <main>
+
+        <div id="AddActivityContainer" class="card container-fluid justify-self-center container
+        rounded collapse fade align-self-center justify-self-center w-75 h-75 mt-5 flex-column
+        align-items-center ">
+            <div class="card-body">
+                <h2 class="display-5 font-weight-light">Nova Atividade</h2>
+                <form id="AddActivity">
+
+                    <label for="ActivityTitle">Título da Atividade</label>
+                    <input type="text" id='ActivityTitle' class="form-control" name="ActivityTitle"
+                    required="true">
+
+                    </input>
+
+                    <label for="ActivityType">Tipo da Atividade</label>
+                    <select id='ActivityType' class="form-control" name="ActivityType">
+                        <option value="Homework">Homework</option>
+                        <option value="Test">Test</option>
+                    </select>
+
+
+                    <label for="SubjectList">Matéria</label>
+                    <select id='SubjectList' class="form-control" name="SubjectList">
+                    </select>
+
+                    <label for="ActivityDeadline">Prazo</label>
+                    <input type="date" class="form-control" id="ActivityDeadline"
+                    name="ActivityDeadline" required="true"></input>
+
+
+
+                    <label for="ActivityContent">Conteúdo</label>
+                    <textarea class="form-control" id="ActivityContent" name="ActivityContent"
+                    rows="6" required="true"></textarea>
+
+                    <label for="ActivityXP">Experiência</label>
+                    <input class="mt-2" type="number" id="ActivityXP" name="ActivityXP" min="1"
+                    max="100" required="true"></input>
+
+
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="../app.js" type="module"></script>
+
+
+</body>
+
+</html>
