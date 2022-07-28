@@ -24,15 +24,15 @@
 }
 
 
-#body {
+body {
     background-image: url(../media/3.png);
-    filter: blur(12px);
     background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
     margin: 0;
     z-index: -1;
+
 
     color: var(--fontcolor);
     font-family: 'Source Sans Pro', sans-serif, 'Times New Roman';
@@ -166,4 +166,9 @@ h5.card-title {
 select,
 option {
     color: black;
+}
+
+.scale-in-center {
+    -webkit-animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
+    animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both
 }
