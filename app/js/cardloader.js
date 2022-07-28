@@ -21,6 +21,8 @@ function LoadCards() {
                   font-weight-bold">${CardObject.subject}</button>
                   <button type="button" class="btn btn-sm btn-deadline
                   font-weight-bold">${CardObject.deadline}</button>
+                  <button type="button" class="btn btn-exp btn-sm
+                            font-weight-bold">XP: ${CardObject.xp} </button>
               </div>
 
               <p class="card-text mt-3 text-justify">${CardObject.content}</p>
