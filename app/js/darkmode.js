@@ -9,27 +9,24 @@ function darkmode() {
       document.documentElement.setAttribute("data-theme", "dark");
       themeImage.classList.remove("bi-moon-stars-fill");
       themeImage.classList.add("bi-sun-fill");
-      $("body").css("transition", "2s ease");
-      document.getElementById("background").style.backgroundImage =
-        "url(./media/7.png)";
-      document
-        .getElementById("main_nav")
-        .classList.remove("navbar-light", "bg-light");
-      document
-        .getElementById("main_nav")
-        .classList.add("navbar-dark", "bg-dark");
+      $("#body-main").css("transition", "2s ease");
+      $("#body-main").css("background-image", "url(../media/7.png)");
+      $("#body-teacher").css("transition", "2s ease");
+      $("#body-teacher").css("background-image", "url(../media/7.png)");
+      $("#main_nav")
+        .removeClass("navbar-light bg-light")
+        .addClass("navbar-dark bg-dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
       themeImage.classList.remove("bi-sun-fill");
       themeImage.classList.add("bi-moon-stars-fill");
-      document.getElementById("background").style.backgroundImage =
-        "url(./media/3.png)";
-      document
-        .getElementById("main_nav")
-        .classList.remove("navbar-dark", "bg-dark");
-      document
-        .getElementById("main_nav")
-        .classList.add("navbar-light", "bg-light");
+      $("#body-main").css("transition", "2s ease");
+      $("#body-main").css("background-image", "url(../media/3.png)");
+      $("#body-teacher").css("transition", "2s ease");
+      $("#body-teacher").css("background-image", "url(../media/3.png)");
+      $("#main_nav")
+        .removeClass("navbar-dark bg-dark")
+        .addClass("navbar-light bg-light");
     }
   }
 
