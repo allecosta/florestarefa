@@ -1,44 +1,17 @@
 
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-);
-const themeImage = document.querySelector("#theme-image");
-
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem('theme', 'dark')
-    themeImage.classList.remove("bi-moon-stars-fill");
-    themeImage.classList.add("bi-sun-fill");
-    document.getElementById('background').style.backgroundImage = "url(./media/7.png)";
-
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    themeImage.classList.remove("bi-sun-fill");
-    themeImage.classList.add("bi-moon-stars-fill");
-    document.getElementById('background').style.backgroundImage = "url(./media/3.png)";
-    localStorage.setItem('theme', 'light');
-  }
-}
+/*Acessibility LocalStorage */
 
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
-  
   if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
     document.getElementById('background').style.backgroundImage = "url(./media/7.png)";
-    themeImage.classList.remove("bi-moon-stars-fill");
-    themeImage.classList.add("bi-sun-fill");
   }
-} 
-
-toggleSwitch.addEventListener("change", switchTheme, false);
-
-
-
-
+  else{
+    document.getElementById('background').style.backgroundImage = "url(./media/3.png)";
+  }
+}  
 
 //PROGRESS BAR
 $('input').on('click', function() {
@@ -48,7 +21,6 @@ $('input').on('click', function() {
   });
   $('.progress-bar').css('width', emptyValue + '%').attr('aria-valuenow', emptyValue); 
 });  
-
 
 
 class HomeworkCard {
@@ -99,7 +71,7 @@ oi = new TestCard("123", "Math", "01/09/2011", "Music");
 window.localStorage.setItem("oi", JSON.stringify(oi));
 
 
-/*Show Task Text*/
+/*Show Task Text */
 
 function showText (n) {
   const listheader= document.getElementsByClassName("list-header");
@@ -107,3 +79,32 @@ function showText (n) {
   listIcon[n].classList.toggle("rotate");
   listheader[n].classList.toggle("hide");
 }  
+
+
+
+
+/* Acessibility Functions */
+
+function LightTheme(){
+  document.documentElement.setAttribute("data-theme", "light");
+  localStorage.setItem('theme', 'light');
+  document.getElementById('background').style.backgroundImage = "url(./media/3.png)";
+} 
+
+function DarkTheme(){
+  document.documentElement.setAttribute("data-theme", "dark");
+  localStorage.setItem('theme', 'dark')
+  document.getElementById('background').style.backgroundImage = "url(./media/7.png)";
+}
+
+function ColorBlindTheme() {
+  document.documentElement.setAttribute("data-theme", "colorblind");
+  localStorage.setItem('theme', 'colorblind');
+  document.getElementById('background').style.backgroundImage = "url(./media/3.png)";
+}
+
+function EpilepsyTheme() {
+  document.documentElement.setAttribute("data-theme", "epilepsy");
+  localStorage.setItem('theme', 'epilepsy');
+  document.getElementById('background').style.backgroundImage = "url(./media/3.png)";
+}

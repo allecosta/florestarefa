@@ -31,19 +31,22 @@
         <h1>Our Über-cool StartSe App</h1>
     </header>
 
-
-    <nav class="theme-switch-wrapper ">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div id="theme-image" class="bi bi-moon-stars-fill"></div>
-        </label>
-    </nav>
-
-
-
     <nav class="navbar fixed-bottom navbar-light bg-light">
+        
+        <div  class="btn-group dropup">
+            <button id="accessibility-btn" type="button" class="btn btn-secondary dropdown-toggle bi bi-universal-access-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </button>
+            <div id="accessibility-options" class="dropdown-menu">
+                <button class="theme-btn" onclick="LightTheme()" class="theme-text">Modo Claro</button><br>
+                <button class="theme-btn" onclick="DarkTheme()" class="theme-text">Modo Escuro</button><br>
+                <button class="theme-btn" onclick="ColorBlindTheme()" class="theme-text">Daltônico</button><br>
+                <button class="theme-btn" onclick="EpilepsyTheme()" class="theme-text">Convulsão e Epilepsia</button>
+            </div>
+        </div>
+
+
         <button id='dark_mode' type="button" class="btn btn-dark"><i class="bi
-        bi-moon-stars-fill"></i>Night</button>
+        bi-moon-stars-fill"></i>Night</button> 
         <button type="button" class="btn flex-column font-weight-bold" data-toggle="modal"
         data-target="#ActivityModal">
             <div><i class="bi bi-plus-circle fa-lg"></i></div>Insert Activity
@@ -112,11 +115,9 @@
                             <button type="button" class="btn btn-sm btn-exp
                             font-weight-bold">Experience: <span id="exp">0</span>/100</button>
                         </div>
-                        <div class="progress">
-                            
+                        <div class="progress">   
                             <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow= "0"  aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          
+                        </div>
                     </div>
                 </div>
             </div> 

@@ -12,7 +12,6 @@
     --age: #ee976b;
     --exp: #65c0bd;
     --taskexp: #65c0bd;
-  
 }
 
 [data-theme="dark"] {
@@ -28,6 +27,33 @@
     --taskexp: #4d908e;
 }
 
+[data-theme="colorblind"]{
+    animation: colorblindanimation 30s infinite;
+    --card-color: #edf2f4;
+    --cardhover:#d7dddd;
+    --homework: #e68fa1;
+    --math: #b08ac9;
+    --deadline: #6eaaf1;
+    --fontcolor: black;
+    --lvl: #f77779;
+    --age: #ee976b;
+    --exp: #65c0bd;
+    --taskexp: #65c0bd;
+}
+
+[data-theme="epilepsy"]{
+    filter: saturate(50%);
+    --card-color: #edf2f4;
+    --cardhover:#d7dddd;
+    --homework: #e68fa1;
+    --math: #b08ac9;
+    --deadline: #6eaaf1;
+    --fontcolor: black;
+    --lvl: #f77779;
+    --age: #ee976b;
+    --exp: #65c0bd;
+    --taskexp: #65c0bd;
+}
 
 body {
     background-image: url(./media/3.png);
@@ -36,41 +62,38 @@ body {
     background-attachment: fixed;
     height: 100vh;
     margin: 0;
-
     color: var(--fontcolor);
     font-family: 'Source Sans Pro', sans-serif, 'Times New Roman';
 }
 
 /* THEME SWITCH */
 
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: 30px;
-    font-size: 2rem;
-    padding: 0px 10px;
+#accessibility-btn{
+    background-color: #37393b;
+    color: #ffffff;
+}
+#accessibility-btn:hover{
+    background-color: #212224;
 }
 
-.theme-switch-wrapper:hover {
-    color: var(--fontcolor);
-    background-color: var(--card-color);
-    transition: .3s;
+.theme-btn{
+    text-decoration: none;
+    border: none;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: white;
 }
 
-.theme-switch-wrapper:hover,
-#theme-image:hover {
-    cursor: pointer;
+.theme-btn:hover{
+    background-color: #d7dddd;
 }
 
-.theme-switch {
-    display: inline-block;
-    position: relative;
-}
 
-.theme-switch input {
-    display: none;
+.theme-text{
+    border-top: 10px;
+    text-align: center;
 }
 
 
@@ -115,14 +138,14 @@ h5.information-name{
     background-color: var(--exp);
 }
 
-.progress{ 
-    width: 100%;
-}
 
 #myBar {
     width: 0%;
 }
 
+.progress-bar{
+    width: "0";
+}
 /* Task Cards */
 
 .card-title{
@@ -136,7 +159,6 @@ h5.card-title {
     font-weight: bold;
     letter-spacing: 1px;
 }
-
 
 .btn {
     color: var(--fontcolor);
@@ -169,7 +191,7 @@ h5.card-title {
 
 .row .tasks p{
     animation: description-reveal .7s ease; 
-} 
+}  
 
 .hide p{
     display: none;
@@ -253,3 +275,15 @@ option {
         opacity: 100; 
     }
 }  
+
+@keyframes colorblindanimation {
+    0%{
+        filter: hue-rotate(60deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+        filter: hue-rotate(60deg);
+    }
+}
