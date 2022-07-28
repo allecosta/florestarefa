@@ -185,6 +185,7 @@ a:focus {
   display: flex;
   padding-top: 90px;
   padding-bottom: 325px;
+  animation: opacity-animation 1.5s ease-in-out;
 }
 
 .hero_detail-box {
@@ -270,6 +271,16 @@ a:focus {
 .client_section h5 {
   font-size: 24px;
   color: #56c0ff ;
+}
+
+/* ANIMATIONS CARDS */
+@keyframes opacity-animation {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .client_section .row {
@@ -433,6 +444,7 @@ a:focus {
   text-align: center;
 }
 
+/* Cards section */
 .informations {
   display: flex;
   flex-direction: column;
@@ -449,6 +461,12 @@ a:focus {
   align-items: center;
   justify-content: center;
   margin-top: 80px;
+  opacity: .7;
+  transition: .5s;
+}
+.cards:hover {
+  opacity: 1;
+  transition: .5s;
 }
 .cards .cards-text {
   margin: 0 30px;
@@ -473,8 +491,11 @@ a:focus {
   display: inline-block;
   width: 30px;
   margin-top: 10px;
-  margin-left: 10px;
   color: #6bd1bd
+}
+
+.icons a:nth-last-child(1){
+  margin-left: 10px;
 }
 
 .scrollTop {
@@ -487,3 +508,4 @@ a:focus {
   border-radius: 8px;
   cursor: pointer;
 }
+

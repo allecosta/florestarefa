@@ -39,6 +39,9 @@
         width: 400px;
         margin-top: 40px;
       }
+      .cards {
+        opacity: 100%;
+      }
 }
 
 @media (max-width: 768px) {
