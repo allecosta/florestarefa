@@ -62,7 +62,8 @@
                 <form id="AddActivity">
 
                     <label for="ActivityTitle">Título da Atividade</label>
-                    <input type="text" id='ActivityTitle' class="form-control" name="ActivityTitle">
+                    <input type="text" id='ActivityTitle' class="form-control" name="ActivityTitle"
+                    required="true">
 
                     </input>
 
@@ -79,17 +80,17 @@
 
                     <label for="ActivityDeadline">Prazo</label>
                     <input type="date" class="form-control" id="ActivityDeadline"
-                    name="ActivityDeadline"></input>
+                    name="ActivityDeadline" required="true"></input>
 
 
 
                     <label for="ActivityContent">Conteúdo</label>
                     <textarea class="form-control" id="ActivityContent" name="ActivityContent"
-                    rows="6"></textarea>
+                    rows="6" required="true"></textarea>
 
                     <label for="ActivityXP">Experiência</label>
                     <input class="mt-2" type="number" id="ActivityXP" name="ActivityXP" min="1"
-                    max="100"></input>
+                    max="100" required="true"></input>
 
 
 
