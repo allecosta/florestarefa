@@ -8,7 +8,6 @@
 
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
-
     <!-- font Awesome Stylesheet -->
     <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -38,9 +37,9 @@
             <div><i class="bi bi-person fa-lg"></i></div>Perfil
         </button>
 
-        <button type="button col-1" class="btn flex-column font-weight-bold">
-            <div><i class="bi bi-plus-circle fa-lg"></i></div>Teacher Mode
-        </button>
+        <a href="./html/teachermode.html" class="btn flex-column font-weight-bold" role="button">
+            <div><i class="bi bi-person-workspace fa-lg"></i></div>Teacher Mode
+        </a>
     </nav>
 
     <main>
@@ -50,111 +49,6 @@
 
         <section id="cards-container" class="justify-self-center mx-auto w-75 position-relative
         slide-in-left">
-
-            <div class="card container-fluid rounded mt-3">
-                <div class="card-body row">
-                    <div class='col'>
-                        <h5 class="card-title display-5">Card title</h5>
-                        <div class="mt-1">
-                            <button type="button" class="btn btn-homework btn-sm
-                            font-weight-bold">Homework</button>
-                            <button type="button" class="btn btn-subj-math btn-sm
-                            font-weight-bold">Math</button>
-                            <button type="button" class="btn btn-sm btn-deadline
-                            font-weight-bold">01/09/2022</button>
-                        </div>
-
-                        <p class="card-text mt-3 text-justify">Some quick example text to build on
-                        the card title and make up the bulk of the card's content. Some quick
-                        example text to build on the card title and make up the bulk of the card's
-                        content.Some quick example text to build on the card title and make up the
-                        bulk of the card's content.Some quick example text to build on the card
-                        title and make up the bulk of the card's content.</p>
-                    </div>
-
-                    <div class="col-sm-1 timeline-container justify-self-center">
-                    </div>
-
-
-                </div>
-            </div>
-            </div>
-
-            <div class="card container-fluid rounded mt-3">
-                <div class="card-body row">
-
-
-                    <div class='col'>
-                        <h5 class="card-title display-5">Exercício de Matemática</h5>
-                        <div class="mt-1">
-                            <button type="button" class="btn btn-homework btn-sm
-                            font-weight-bold">Homework</button>
-                            <button type="button" class="btn btn-subj-math btn-sm
-                            font-weight-bold">Math</button>
-                            <button type="button" class="btn btn-sm btn-deadline
-                            font-weight-bold">01/09/2022</button>
-                        </div>
-
-                        <div class="row tasks">
-                            <div class="col-md-6">
-                                <p><span>Atividades sobre formas planas</span>
-                                    Blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-sm-1 justify-self-center">
-                        <input name="done" class="done" type="checkbox" value="10">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card container-fluid rounded mt-3">
-                <div class="card-body row">
-
-
-                    <div class='col'>
-                        <h5 class="card-title display-5">Teste de Português</h5>
-                        <div class="mt-1">
-                            <button type="button" class="btn btn-homework btn-sm
-                            font-weight-bold">Homework</button>
-                            <button type="button" class="btn btn-subj-math btn-sm
-                            font-weight-bold">Portuguese</button>
-                            <button type="button" class="btn btn-sm btn-deadline
-                            font-weight-bold">01/09/2022</button>
-                        </div>
-
-                        <div class="row tasks">
-                            <div class="col-md-6">
-                                <p><span>Atividades sobre pronomes</span>
-                                    Blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <label>2014-01-29</label>
-                            </div>
-
-                            <div class="col-md-2">
-                                <input name="done" class="done" type="checkbox" value="30">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-1 timeline-container justify-self-center">
-                    </div>
-
-                </div>
-            </div>
-
-
-
-
-
-
-
         </section>
 
         <div id="information-card" class=" card container-fluid justify-self-center container
@@ -204,7 +98,6 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="app.js" type="module"></script>
-    <script src="../js/uuidv5.min.js" type="module"></script>
 
 
 </body>
