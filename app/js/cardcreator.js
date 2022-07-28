@@ -1,12 +1,24 @@
 function SaveActivity() {
   $("#AddActivity").submit(function () {
-    // Get all the forms elements and their values in one step
-    console.log("funcionando");
-    let a = randomUUID();
-    console.log(a);
-    var saved_data = $(this).serializeArray();
+    //Pseudo Id Generator
+    var CardId = Date.now();
+    console.log(CardId);
 
-    localStorage.setItem("saved_data", JSON.stringify(saved_data));
+    //Adding ID to Cards
+    var card_data = $(this).serializeArray();
+    card_data.push({ name: "id", value: CardId });
+
+    //Saving list of IDs
+    if (localStorage.getItem("cards") == null) {
+      localStorage.setItem("cards", CardId);
+    } else {
+      var CardArray = Array(localStorage.getItem("cards"));
+      CardArray.push(CardId);
+      localStorage.setItem("cards", CardArray);
+    }
+
+    //Storing each card Data;
+    localStorage.setItem("card_data" + CardId, JSON.stringify(card_data));
   });
 }
 
