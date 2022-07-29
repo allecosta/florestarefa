@@ -2,7 +2,6 @@ function SaveActivity() {
   $("#AddActivity").submit(function () {
     //Pseudo Id Generator
     var CardId = Date.now();
-    console.log(CardId);
 
     //Adding ID to Cards
     var card_data = $(this).serializeArray();
