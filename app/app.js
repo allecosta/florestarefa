@@ -1,4 +1,4 @@
-import { start_up_app } from "./js/subjectcreator.js";
+import { SubjectListStart } from "./js/subjectcreator.js";
 import { SaveActivity } from "./js/cardcreator.js";
 import { CardLoader, LoadCards } from "./js/cardloader.js";
 import { darkmode } from "./js/darkmode.js";
@@ -9,11 +9,5 @@ CardLoader(LoadCards);
 ProfileService();
 darkmode();
 GameService();
-start_up_app();
+SubjectListStart();
 SaveActivity();
-
-$(document).ready(function () {
-  $("#AddActivitybtn").click(function () {
-    $("#AddActivityContainer").toggle();
-  });
-});

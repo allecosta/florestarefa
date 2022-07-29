@@ -354,3 +354,18 @@ h5.card-title {
     bottom: 6rem;
     left: 40vw;
 }
+
+header {
+    background-color: #d7dddd;
+    margin-top: 0;
+}
+
+h1 i {
+    color: #0d7000;
+
+}
+
+#logo {
+    color: #0d7000;
+
+}
