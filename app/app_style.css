@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 
 :root {
-    --card-color: #edf2f4;
-    --cardhover:#d7dddd;
+    --card-color: hsla(197, 24%, 94%, 0.98);
+    --cardhover: #d7dddd;
     --homework: #e68fa1;
     --math: #b08ac9;
     --deadline: #6eaaf1;
@@ -79,14 +79,14 @@ body {
 /* Information Card */
 
 .card {
-    margin-top:15px;
+    margin-top: 15px;
 }
 
-.card:hover{
+.card:hover {
     background-color: var(--cardhover);
 }
 
-#information-card-image img{
+#information-card-image img {
     width: 130px;
     border-radius: 10px;
 }
@@ -150,8 +150,8 @@ h5.card-title {
     background-color: var(--math);
 }
 
-.btn-exp{
-    background-color: var( --taskexp);
+.btn-exp {
+    background-color: var(--taskexp);
 }
 
 .btn-deadline {
@@ -166,7 +166,7 @@ h5.card-title {
 
 .card {
     background-color: var(--card-color);
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 .list-icon {
@@ -177,34 +177,35 @@ h5.card-title {
     color: var(--fontcolor);
 }
 
-.rotate{
+.rotate {
     transform: rotate(90deg);
     transition-duration: 0.3s;
 }
 
-.card .task-checkbox{
-    position:absolute;
+.card .task-checkbox {
+    position: absolute;
     right: 0px;
-    top:-0;
-    text-align: right; 
+    top: -0;
+    text-align: right;
 }
 
-.card .task-checkbox .done{
+.card .task-checkbox .done {
     height: 30px;
     width: 30px;
 }
 
-.row{
+.row {
     flex-wrap: nowrap !important;
 }
-.col-md-6{
+
+.col-md-6 {
     margin-top: 10px;
     max-width: 90% !important;
     font-size: 1.1rem;
-    letter-spacing: .3px;   
+    letter-spacing: .3px;
 }
 
-.list-text{
+.list-text {
     width: 100%;
     margin: 0;
 }
@@ -219,13 +220,14 @@ h5.card-title {
 
 
 
-main {
-    z-index: 0;
-}
+
 
 #information-card {
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
     animation: slide-in-bottom 0.7s ease-in-out both;
+    width: 27rem;
+    height: 27rem;
+    background-color: hsla(180, 8%, 85%, .95);
 }
 
 #information-card-image {
@@ -239,16 +241,24 @@ main {
     animation: slide-in-left 0.7s ease-in-out both;
 }
 
-.slide-in-left div:nth-of-type(1) {
-    animation: slide-in-left 0.7s ease-in-out 0.7s both;
+.slide-in-bottom {
+    -webkit-animation: slide-in-bottom 0.7s ease-in-out both;
+    animation: slide-in-bottom 0.7s ease-in-out both;
 }
 
-.slide-in-left div:nth-of-type(2) {
-    animation: slide-in-left 0.7s ease-in-out 1s both;
+.slide-out-bottom {
+    -webkit-animation: slide-out-bottom 0.7s ease-in-out both;
+    animation: slide-out-bottom 0.7s ease-in-out both;
 }
 
-.slide-in-left div:nth-of-type(3) {
-    animation: slide-in-left 0.7s ease-in-out 1.2s both;
+
+#cards-container {
+    max-height: 80vh;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    z-index: 5;
 }
 
 /* ----------------------------------------------
@@ -285,4 +295,62 @@ main {
         transform: translateY(0);
         opacity: 1
     }
+}
+
+@keyframes slide-out-bottom {
+    0% {
+
+        transform: translateY(0);
+        opacity: 1
+    }
+
+    100% {
+
+        transform: translateY(5rem);
+        opacity: 0
+    }
+}
+
+
+.tree {
+    width: 150px;
+
+
+}
+
+
+#lvl1 {
+    position: fixed;
+    z-index: -1;
+    bottom: 8rem;
+    left: 1vw;
+}
+
+
+#lvl2 {
+    position: fixed;
+    z-index: -1;
+    bottom: 6.5rem;
+    left: 80vw;
+}
+
+#lvl3 {
+    position: fixed;
+    z-index: -1;
+    bottom: 9rem;
+    left: 20vw;
+}
+
+#lvl4 {
+    position: fixed;
+    z-index: -1;
+    bottom: 6rem;
+    left: 60vw;
+}
+
+#lvl5 {
+    position: fixed;
+    z-index: -1;
+    bottom: 6rem;
+    left: 40vw;
 }
