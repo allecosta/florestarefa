@@ -3,16 +3,20 @@ import { ObjectFromCard } from "./cardobject.js";
 //Adding procedural animation
 function CardLoader(callback) {
   let CardsStrings = localStorage.getItem("cards");
-  let CardsArray = CardsStrings.split(",");
-  for (let i = 0; i < CardsArray.length; i++) {
-    document.styleSheets[3].insertRule(
-      `.slide-in-left div:nth-of-type(${i + 1}) {
+  if (CardsStrings == null) {
+    CardsStrings = {};
+  } else {
+    let CardsArray = CardsStrings.split(",");
+    for (let i = 0; i < CardsArray.length; i++) {
+      document.styleSheets[3].insertRule(
+        `.slide-in-left div:nth-of-type(${i + 1}) {
       animation: slide-in-left 0.7s ease-in-out both;
       animation-delay: ${0 + 0.3 * i}s;
       
   }`,
-      4 + i
-    );
+        4 + i
+      );
+    }
   }
 
   callback();
@@ -23,7 +27,6 @@ function LoadCards() {
   //Parsing Cards Array
 
   let CardsStrings = localStorage.getItem("cards");
-  CardsStrings == null ? (CardsStrings = {}) : "";
   let CardsArray = CardsStrings.split(",");
 
   for (let CardId of CardsArray) {
