@@ -27,18 +27,15 @@ function LoadCards() {
   //Parsing Cards Array
 
   let CardsStrings = localStorage.getItem("cards");
-  if (CardsStrings == null) {
-    CardsStrings = {};
-  } else {
-    let CardsArray = CardsStrings.split(",");
+  let CardsArray = CardsStrings.split(",");
 
-    for (let CardId of CardsArray) {
-      //Parsing each card
-      let CardAtt = JSON.parse(localStorage.getItem("card_data" + CardId));
-      let CardObject = ObjectFromCard(CardAtt);
+  for (let CardId of CardsArray) {
+    //Parsing each card
+    let CardAtt = JSON.parse(localStorage.getItem("card_data" + CardId));
+    let CardObject = ObjectFromCard(CardAtt);
 
-      //FINALLY building a card
-      $("#cards-container").append(`
+    //FINALLY building a card
+    $("#cards-container").append(`
       <div id=${CardObject.id} class="card container-fluid rounded mt-3">
       <div class="card-body row">
           <div class='col'>
@@ -63,7 +60,6 @@ function LoadCards() {
 
 
       </div>`);
-    }
   }
 }
 
