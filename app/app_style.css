@@ -10,6 +10,7 @@
     --lvl: #f77779;
     --age: #ee976b;
     --exp: #65c0bd;
+    --taskexp: #65c0bd;
 }
 
 [data-theme="dark"] {
@@ -98,6 +99,11 @@ h5.information-name {
     letter-spacing: 1px;
 }
 
+#information-card {
+    background-color: var(--card-color) !important;
+
+}
+
 #information .btn {
     color: var(--fontcolor);
     letter-spacing: 1px;
@@ -119,6 +125,7 @@ h5.information-name {
 
 .progress {
     width: 100%;
+    background-color: #949494;
 }
 
 #myBar {
@@ -356,7 +363,7 @@ h5.card-title {
 }
 
 header {
-    background-color: #d7dddd;
+    background-color: var(--card-color);
     margin-top: 0;
 }
 
@@ -368,4 +375,8 @@ h1 i {
 #logo {
     color: #0d7000;
 
+}
+
+.tree-night {
+    filter: brightness(.7)
 }

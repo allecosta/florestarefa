@@ -38,17 +38,18 @@
 
     <nav id="main_nav" class="navbar fixed-bottom navbar-light bg-light fa-lg row
     justify-self-center">
-        <label class="theme-switch col-1" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div id="theme-image" class="bi bi-moon-stars-fill"></div>
+        <label class="theme-switch col-1 flex-column" for="checkbox">
+            <input type="checkbox" id="checkbox" class="btn" title="dark mode" />
+            <div><i id="theme-image" class="bi bi-moon-stars-fill"></i></div>
         </label>
         <button type="button" class="btn flex-column col-1 text-center font-weight-bold"
         data-toggle="collapse" href="#information-card" aria-pressed="false" autocomplete="off">
             <div><i class="bi bi-person-fill fa-lg"></i></div>Perfil <br>
         </button>
-        <button type="button" class="btn flex-column col-1 text-center font-weight-bold"
-        data-toggle="collapse" href="#cards-container" aria-pressed="false" autocomplete="off">
-            <div><i class="bi bi-person-fill fa-lg"></i></div>Mostrar<br> Tarefas
+        <button id="show-things" type="button" class="btn flex-column col-1 text-center
+        font-weight-bold" data-toggle="collapse" href="#cards-container" aria-pressed="false"
+        autocomplete="off">
+            <div><i class="bi bi-card-checklist fa-lg"></i></div>Mostrar<br> Tarefas
         </button>
 
         <a href="./html/teachermode.html" class="btn flex-column font-weight-bold text-center"
