@@ -1,28 +1,35 @@
 function ProfileService() {
   function SavingCards() {
     let CardsStrings = localStorage.getItem("cards");
-    let CardsArray = CardsStrings.split(",");
-    let CardsSaveState = JSON.parse(localStorage.getItem("CardsSaveState"));
+    if (CardsStrings == null) {
+      CardsStrings = {};
+    } else {
+      let CardsArray = CardsStrings.split(",");
+      let CardsSaveState = JSON.parse(localStorage.getItem("CardsSaveState"));
 
-    //Almost Saving Values let CardsSaveStateKeys = Object.keys(CardsSaveState); let
-    // CardsSaveStateValues = Object.values(CardsSaveState);
+      //Almost Saving Values let CardsSaveStateKeys = Object.keys(CardsSaveState); let
+      // CardsSaveStateValues = Object.values(CardsSaveState);
 
-    // for (let i = 0; i < CardsSaveStateKeys.length; i++) { $( $( $(
-    //   $(`#${CardsSaveStateKeys[i]}`).children().children().children()[1] ).children()[4]
-    //     ).children() ).prop("checked", CardsSaveStateValues[i]); }
+      // for (let i = 0; i < CardsSaveStateKeys.length; i++) { $( $( $(
+      //   $(`#${CardsSaveStateKeys[i]}`).children().children().children()[1] ).children()[4]
+      //     ).children() ).prop("checked", CardsSaveStateValues[i]); }
 
-    $("input").on("click", function () {
-      for (let card of CardsArray) {
-        //What a mess;
-        let checkbox_checker = $(
-          $(
-            $($(`#${card}`).children().children().children()[1]).children()[4]
-          ).children()
-        ).prop("checked");
-        CardsSaveState[`${card}`] = checkbox_checker;
-        localStorage.setItem("CardsSaveState", JSON.stringify(CardsSaveState));
-      }
-    });
+      $("input").on("click", function () {
+        for (let card of CardsArray) {
+          //What a mess;
+          let checkbox_checker = $(
+            $(
+              $($(`#${card}`).children().children().children()[1]).children()[4]
+            ).children()
+          ).prop("checked");
+          CardsSaveState[`${card}`] = checkbox_checker;
+          localStorage.setItem(
+            "CardsSaveState",
+            JSON.stringify(CardsSaveState)
+          );
+        }
+      });
+    }
   }
   class Profile {
     constructor(name, age, xp = 0) {
