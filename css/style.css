@@ -17,8 +17,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #aae0ff; 
-  border-radius: 10px; 
+  background-color: #aae0ff;
+  border-radius: 10px;
 }
 
 .layout_padding {
@@ -62,7 +62,8 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
   transition: all 0.3s ease 0s;
 }
-.call_to-btn2:hover{
+
+.call_to-btn2:hover {
   color: #fff;
   -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.7);
@@ -260,7 +261,7 @@ a:focus {
   font-weight: 600;
 }
 
-.client_section p{
+.client_section p {
   margin-bottom: 5px;
 }
 
@@ -270,7 +271,7 @@ a:focus {
 
 .client_section h5 {
   font-size: 24px;
-  color: #56c0ff ;
+  color: #56c0ff;
 }
 
 /* ANIMATIONS CARDS */
@@ -278,6 +279,7 @@ a:focus {
   0% {
     opacity: 0%;
   }
+
   100% {
     opacity: 100%;
   }
@@ -464,13 +466,11 @@ a:focus {
   opacity: .7;
   transition: .5s;
 }
-.cards:hover {
-  opacity: 1;
-  transition: .5s;
-}
+
 .cards .cards-text {
   margin: 0 30px;
 }
+
 .cards:nth-child(even) {
   flex-direction: row-reverse;
   align-items: center;
@@ -494,7 +494,7 @@ a:focus {
   color: #6bd1bd
 }
 
-.icons a:nth-last-child(1){
+.icons a:nth-last-child(1) {
   margin-left: 10px;
 }
 
@@ -508,4 +508,3 @@ a:focus {
   border-radius: 8px;
   cursor: pointer;
 }
-
