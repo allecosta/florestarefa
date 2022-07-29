@@ -6,6 +6,7 @@ function SaveActivity() {
     //Adding ID to Cards
     var card_data = $(this).serializeArray();
     card_data.push({ name: "id", value: CardId });
+    console.log(card_data);
 
     //Saving list of IDs
     if (localStorage.getItem("cards") == null) {

@@ -21,7 +21,9 @@ function CardLoader(callback) {
 //Loading Cards from Database
 function LoadCards() {
   //Parsing Cards Array
+
   let CardsStrings = localStorage.getItem("cards");
+  CardsStrings == null ? (CardsStrings = {}) : "";
   let CardsArray = CardsStrings.split(",");
 
   for (let CardId of CardsArray) {
