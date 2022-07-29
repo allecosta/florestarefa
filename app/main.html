@@ -25,13 +25,14 @@
     <title>Hello, world!</title>
 </head>
 
-<body id="background">
+<body id="background" class="text-focus-in">
     <header>
         <h1>florestarefa <i class="fa-solid fa-tree"></i></h1>
     </header>
 
 
-    <nav id="main_nav" class="navbar fixed-bottom navbar-light bg-light fa-lg row">
+    <nav id="main_nav" class="navbar fixed-bottom navbar-light bg-light fa-lg row
+    justify-self-center">
         <label class="theme-switch col-1" for="checkbox">
             <input type="checkbox" id="checkbox" />
             <div id="theme-image" class="bi bi-moon-stars-fill"></div>
@@ -39,7 +40,10 @@
         <button type="button" class="btn flex-column col-1 text-center font-weight-bold"
         data-toggle="collapse" href="#information-card" aria-pressed="false" autocomplete="off">
             <div><i class="bi bi-person-fill fa-lg"></i></div>Perfil <br>
-            <div>''</div>
+        </button>
+        <button type="button" class="btn flex-column col-1 text-center font-weight-bold"
+        data-toggle="collapse" href="#cards-container" aria-pressed="false" autocomplete="off">
+            <div><i class="bi bi-person-fill fa-lg"></i></div>Mostrar<br> Tarefas
         </button>
 
         <a href="./html/teachermode.html" class="btn flex-column font-weight-bold text-center"
@@ -54,40 +58,52 @@
 
 
 
-        <section id="cards-container" class="justify-self-center mx-auto w-75 position-relative
-        slide-in-left">
+        <section id="cards-container" class="justify-self-center mx-auto w-75  overflow-auto
+        slide-in-left collapse in">
         </section>
 
         <div id="information-card" class=" card container-fluid justify-self-center container
-        rounded collapse fade fixed-bottom flex-column align-items-center">
+        rounded collapse fade fixed-bottom flex-column align-items-center text-center">
             <figure class="m-5">
                 <img id="information-card-image" class="rounded-circle"
                 src="./media/profile_pic.jpg" alt="Sua Foto de Perfil">
                 <figcaption>
-                    <h5 id="information" class="information-name display-5 text-center">Seu Nome
-                    Aqui</h5>
+                    <h5 id="profile_name" class="information-name display-6 text-center m-4"></h5>
                 </figcaption>
             </figure>
-
             <div>
-                <div>
-                    <button type="button" class="btn btn-lvl btn-sm font-weight-bold">lvl.
-                        <span id="level">0</span> </button>
-                    <button type="button" class="btn btn-age btn-sm font-weight-bold">Age:
-                        <span id="age">0</span></button>
-                    <button type="button" class="btn btn-sm btn-exp font-weight-bold">Experience:
-                        <span id="exp">0</span>/100</button>
+                <div class="btn btn-lvl btn-sm font-weight-bold m-1 big">Nível
+                    <span id="profile_level">0</span>
                 </div>
-                <div class="progress">
-
-                    <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated"
-                    role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                    aria-valuemax="100"></div>
+                <div class="btn btn-age btn-sm font-weight-bold m-1">
+                    <span id="profile_age">0</span> anos
                 </div>
-
+                <div class="btn btn-sm btn-exp font-weight-bold m-1">XP
+                    <span id="profile_xp">0</span>
+                </div>
             </div>
+            <div class="progress mt-3">
+                <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated"
+                role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+
         </div>
-        </div>
+
+
+
+        <div id="lvl1" class="bg-img tree col d-none"><img class="tree"
+        src="./media/trees/tree1.png" alt=""></div>
+        <div id="lvl2" class="bg-img tree col d-none"><img class="tree"
+        src="./media/trees/tree2.png" alt=""></div>
+        <div id="lvl3" class="bg-img tree col d-none"><img class="tree"
+        src="./media/trees/tree3.png" alt=""></div>
+        <div id="lvl4" class="bg-img tree col d-none"><img class="tree"
+        src="./media/trees/tree4.png" alt=""></div>
+        <div id="lvl5" class="bg-img tree col d-none "><img class="tree"
+        src="./media/trees/tree5.png" alt=""></div>
+
+
     </main>
 
 
