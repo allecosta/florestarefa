@@ -9,7 +9,7 @@
 Vamos semear nosso conhecimento e fazê-la florescer novamente?<br>
 Quanto mais você estudar, se dedicar e se aplicar, mais árvores do conhecimento crescerão na sua floresta!*
 
-### Deploy v1.0 - [acesse a nosssa webpage](https://allecosta.github.io/webpage/)
+### Deploy v1.0 - [acesse a nosssa webpage](https://allecosta.github.io/florestarefa/)
 
 <h2 align="center">
   <img src="/app/media/app.gif">
